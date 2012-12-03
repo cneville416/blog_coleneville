@@ -7,7 +7,7 @@ require('config/dbconfig.php');
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="icon" type="image/png" href="" />
+		<link rel="icon" type="image/png" href="img/logo.png" />
 
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="styles.css" />
@@ -23,6 +23,9 @@ require('config/dbconfig.php');
 			<nav>
 				<?php include('layout/nav.php');?>
 			</nav>
+			<div id="message">
+				<?php include('layout/message.php');?>
+			</div>
 			<div id="content">
 				<?php include('layout/content.php');?>
 			</div>
