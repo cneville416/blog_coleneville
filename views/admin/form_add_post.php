@@ -8,23 +8,25 @@ extract($_SESSION);
 unset($_SESSION['post_title']);
 unset($_SESSION['post_text']);
 ?>
-<h2>Add a new post</h2>
+<h2 class="new">Add a new post</h2>
 <form action="actions/add_post.php" method="post" class="form-horizontal">
 	<div class="control-group">
 		<label class="control-label" for="post_title">Post Title</label>
 		<div class="controls">
-			<input class="span4" type="text" name="post_title" placeholder="required" value="<?php echo $post_title?>"/>
+			<input class="span10" type="text" name="post_title" placeholder="required" value="<?php echo $post_title?>"/>
 		</div>
 	</div>
 	
 	<div class="control-group">
-		<label class="control-label" for="post_text">text</label>
+		<label class="control-label" for="post_text">Entry</label>
 		<div class="controls">
-			<input class="span4" type="text" name="post_text" placeholder="required"  value="<?php echo $post_text?>"/>
+			<textarea rows="30" cols="30" class="span10" name="post_text">
+			<?php echo $post_text?>
+			</textarea>
 		</div>
 	</div>
 	<div class="form-actions">
-		<button type="submit" class="btn btn-success">Add</button>
+		<button type="submit" class="btn btn-success">Publish</button>
 		<button type="button" class="btn" onclick="window.history.go(-1)">Cancel</button>
 	</div>
 </form>

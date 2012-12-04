@@ -7,12 +7,14 @@ require('config/dbconfig.php');
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="icon" type="image/png" href="img/logo.png" />
-
+		<link rel="icon" type="image/png" href="img/ncaa.png" />
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="styles.css" />
 		
-		<title>Blog</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>	
+		 
+		<title>College Football</title>
 	</head>
 
 	<body>

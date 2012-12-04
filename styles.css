@@ -1,4 +1,20 @@
 .logo2 {
-	width:24px;
-	height:24px;
+	width:30px;
+	height:30px;
+}
+
+.entry {
+	height:100px;
+}
+
+.new {
+	margin-left:180px; 
+}
+
+#post {
+	margin-left:15px;
+}
+
+#post h6 {
+	font-size:8px;
 }

@@ -34,11 +34,11 @@ if($post_title == '' || $post_text == '' ) {
 	} else {
 	
 		$_SESSION['flash'] = array(
-				'message' =>"<strong>$band_name</strong> was successfully added",
+				'message' =>"<strong>$post_title</strong> was successfully added",
 				'type' => "success"
 		);
 		// Redirect
-		header('Location:../?p=select_bands');
+		header('Location:../?p=admin/list_posts');
 	
 	
 	}
