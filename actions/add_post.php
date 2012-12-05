@@ -21,6 +21,8 @@ if($post_title == '' || $post_text == '' ) {
 	die(); 
 }else {
 	require('../config/dbconfig.php');
+	$post_text = addslashes($post_text);
+	$post_title = addslashes($post_title);
 	$conn = new mysqli('localhost',DB_USERNAME,DB_PASSWORD,DB_NAME);
 	$sql = "INSERT INTO posts (post_title,post_text) VALUES('$post_title','$post_text')";
 	$conn->query($sql);

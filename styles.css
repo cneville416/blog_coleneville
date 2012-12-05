@@ -9,12 +9,79 @@
 
 .new {
 	margin-left:180px; 
+	color:#ABABAB;
 }
 
-#post {
+.posts {
 	margin-left:15px;
+	width:500px;
+	border-bottom:1px solid #CCC;
 }
 
-#post h6 {
+.posted {
+	margin-left:15px;
+	width:650px;
+}
+
+#time {
 	font-size:8px;
+	color:black;
+}
+
+.tables {
+	width:800px;
+	margin:0px auto;
+	background-color:white;
+}
+
+.add {
+	margin-left:440px;
+	margin-top:10px;
+}
+
+body {
+	color:white;
+	background-color:#696969;
+}
+
+.post {
+	font-size:20px;
+}
+
+#title {
+	font-size:45px;
+	color:#C4000A;
+}
+
+a {
+	color:#C4000A;
+}
+
+a:hover {
+	color:white;
+}
+
+#post_time {
+	color:black;
+}
+
+table {
+	color:black;
+}
+
+table th {
+	color:#C4000A;
+}
+
+.admin {
+	color:black;
+}
+
+.admin:hover {
+	color:#C4000A;
+}
+
+.form-actions {
+	background-color:#696969;
+	border-top:1px hidden; 
 }

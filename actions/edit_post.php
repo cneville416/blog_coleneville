@@ -1,14 +1,16 @@
 <?php
 session_start();
 // Load DB constants
-require('../config/db.php');
+require('../config/dbconfig.php');
 
 // Connect to the database
 $conn = new mysqli('localhost',DB_USERNAME,DB_PASSWORD,DB_NAME);
-
-// Construct query with POSTed data
 extract($_POST);
-$sql = "UPDATE posts SET 'post_title = $post_title','post_text = $post_text', WHERE band_id=$band_id";
+// Construct query with POSTed data
+$post_text = addslashes($post_text);
+$post_title = addslashes($post_title);
+
+$sql = "UPDATE posts SET post_title = '$post_title', post_text = '$post_text' WHERE post_id= $post_id";
 
 // Execute query
 $conn->query($sql);
@@ -22,12 +24,12 @@ if($conn->error != '') {
 	echo '</pre>';
 } else {
 	$_SESSION['flash'] = array(
-			'message' =>"<strong>$band_name</strong> was successfully edited",
+			'message' =>"<strong>$post_title</strong> was successfully edited",
 			'type' => ""
 	);
 	
 	// Redirect
-	header('Location:../?p=select_bands');
+	header('Location:../?p=public/home');
 }
 
 // Close DB connection
