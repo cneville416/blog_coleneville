@@ -10,7 +10,7 @@ $sql = "SELECT * FROM posts ORDER BY post_id DESC";
 $results = $conn->query($sql);
 
 ?>
-<table class="table table-striped table-condensed table-bordered tables">
+<div id="tabl"><table class="table table-striped table-condensed table-bordered tables table1">
 	<tr>
 		<th>Post Title</th>
 		<th>Entry</th>
@@ -27,5 +27,5 @@ $results = $conn->query($sql);
 		</td>
 	</tr>
 <?php endwhile; ?>
-</table>
+</table></div>
 <a class="btn btn-primary add" href="./?p=admin/form_add_post"><i class="icon-plus icon-white"></i> Add Post</a>

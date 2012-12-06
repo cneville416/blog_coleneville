@@ -9,20 +9,20 @@ unset($_SESSION['post_title']);
 unset($_SESSION['post_text']);
 ?>
 <h2 class="new">Add a new post</h2>
-<form action="actions/add_post.php" method="post" class="form-horizontal">
+<form action="actions/add_post.php" method="post" class="form-horizontal forms">
 	<div class="control-group">
 		<label class="control-label" for="post_title">Post Title</label>
 		<div class="controls">
-			<input class="span10" type="text" name="post_title" placeholder="required" value="<?php echo $post_title?>"/>
+			<input class="span6" type="text" name="post_title" placeholder="required" value="<?php echo $post_title?>"/>
 		</div>
 	</div>
 	
 	<div class="control-group">
 		<label class="control-label" for="post_text">Entry</label>
 		<div class="controls">
-			<textarea rows="30" cols="30" class="span10" name="post_text">
-			<?php echo $post_text?>
-			</textarea>
+<textarea rows="22" cols="30" class="span7" name="post_text">
+<?php echo $post_text?>
+</textarea>
 		</div>
 	</div>
 	<div class="form-actions">

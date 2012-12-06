@@ -23,13 +23,15 @@ $conn->close();
 	<div class="control-group">
 		<label class="control-label" for="post_title">Post Title</label>
 		<div class="controls">
-			<input class="span4" type="text" name="post_title" placeholder="required" value="<?php echo $post['post_title'] ?>"/>
+			<input class="span10" type="text" name="post_title" placeholder="required" value="<?php echo $post['post_title'] ?>"/>
 		</div>
 	</div>
 	<div class="control-group">
 		<label class="control-label" for="post_text">Entry</label>
 		<div class="controls">
-			<input class="span4" type="text" name="post_text" placeholder="required" value="<?php echo $post['post_text'] ?>"/>
+<textarea rows="30" cols="30" class="span10" name="post_text">
+<?php echo $post['post_text']?>
+</textarea>
 		</div>
 	</div>
 	<div class="form-actions">

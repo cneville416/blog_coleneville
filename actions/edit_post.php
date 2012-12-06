@@ -29,7 +29,7 @@ if($conn->error != '') {
 	);
 	
 	// Redirect
-	header('Location:../?p=public/home');
+	header('Location:../?p=admin/list_posts');
 }
 
 // Close DB connection

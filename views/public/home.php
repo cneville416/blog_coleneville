@@ -8,10 +8,15 @@ $results = $conn->query($sql);
 
 ?>
 
-<?php while($post = $results->fetch_assoc()): ?>
-		<div class="posts">
-		<h3><a href="./?p=public/post&id=<?php echo $post['post_id']?>"><?php echo $post['post_title'] ?></a></h2>
-		<p><?php echo $post['post_text'] ?><p>
+<?php $post = $results->fetch_assoc(); ?>
+	<div class="post23">
+		<h3 class="title3"><a href="./?p=public/post&id=<?php echo $post['post_id']?>"><?php echo $post['post_title'] ?></a></h3>
 		<h6 id="time"><?php echo $post['post_datepublished'] ?></h6>
-		</div>
+		<p class="content"><?php echo $post['post_text'] ?><p>
+	</div>
+<?php while($post = $results->fetch_assoc()): ?>
+	<div class="post24 post23">
+		<h4 class="title3"><a href="./?p=public/post&id=<?php echo $post['post_id']?>"><?php echo $post['post_title'] ?></a></h4>
+		<h6 id="time"><?php echo $post['post_datepublished'] ?></h6>
+	</div>
 <?php endwhile; ?>
