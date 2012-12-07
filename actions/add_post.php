@@ -21,6 +21,8 @@ if($post_title == '' || $post_text == '' ) {
 	die(); 
 }else {
 	require('../config/dbconfig.php');
+	$post_text = strip_tags($post_text, '<a><p>');
+	$post_title = strip_tags($post_title);
 	$post_text = addslashes($post_text);
 	$post_title = addslashes($post_title);
 	$conn = new mysqli('localhost',DB_USERNAME,DB_PASSWORD,DB_NAME);

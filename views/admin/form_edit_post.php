@@ -16,20 +16,20 @@ $post = $results->fetch_assoc();
 $conn->close();
 
 ?>
-<h2>Edit Post</h2>
+<h2 class="new">Edit Post</h2>
 <form action="actions/edit_post.php" method="post" class="form-horizontal">
 	<input type="hidden" name="post_id" value="<?php echo $post['post_id'] ?>" />
 	<input type="hidden" name="post_datepublished" value="<?php echo $post['post_datepublished']?>"/>
 	<div class="control-group">
 		<label class="control-label" for="post_title">Post Title</label>
 		<div class="controls">
-			<input class="span10" type="text" name="post_title" placeholder="required" value="<?php echo $post['post_title'] ?>"/>
+			<input class="span6" type="text" name="post_title" placeholder="required" value="<?php echo $post['post_title'] ?>"/>
 		</div>
 	</div>
 	<div class="control-group">
 		<label class="control-label" for="post_text">Entry</label>
 		<div class="controls">
-<textarea rows="30" cols="30" class="span10" name="post_text">
+<textarea rows="22" cols="30" class="span7" name="post_text">
 <?php echo $post['post_text']?>
 </textarea>
 		</div>

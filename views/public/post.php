@@ -13,6 +13,6 @@ $results = $conn->query($sql);
 	<div class="posted">
 	<h1 id="title"><?php echo $post['post_title']?></h1>
 	<p class="post"><?php  echo $post['post_text']?></p>
-	<h6 id="post_time"><?php echo $post['post_datepublished']?></h6>
+	<h6 id="post_time"><?php echo date('l, F d, Y g:i a',strtotime($post['post_datepublished'])) ?></h6>
 	</div>
 <?php endwhile;?>
